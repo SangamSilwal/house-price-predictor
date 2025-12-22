@@ -65,6 +65,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: ssngam/fastapi:{{ github.sha }}
+          tags: ssngam/fastapi:${{ github.sha }}
           context: "."
           file: "dockerfile"
