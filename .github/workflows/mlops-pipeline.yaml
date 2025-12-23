@@ -113,9 +113,8 @@ jobs:
       - name: Build and Push Image
         uses: docker/build-push-action@v6
         with:
-          context: .
-          file: dockerfile
           push: true
-          tags: |
-            ssngam/fastapi:${{ github.sha }}
-            ssngam/fastapi:latest
+          tags: ssngam/fastapi:${{ github.sha }}
+          context: "."
+          file: "dockerfile"
+
